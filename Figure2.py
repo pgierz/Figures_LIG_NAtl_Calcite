@@ -29,14 +29,14 @@ plot_var_from_ncdf_file("THO", circ_file, m2, **cf_args)
 cf = plot_var_from_ncdf_file("THO", dilu_file, m3, **cf_args)
 
 cbar_ax = f.add_axes([0.15, 0.25, 0.7, 0.05])
-cbar = plt.colorbar(cf, spacing="proportional", orientation="horizontal",
+cbar = plt.colorbar(cf, 
+                    spacing="proportional",
+                    orientation="horizontal",
                     cax=cbar_ax,
-                   ticks=[-2.0, -1.5, -1.0, -0.5, 0, 0.5, 1.0, 1.5, 2.0],
+                    ticks=[-2.0, -1.5, -1.0, -0.5, 0, 0.5, 1.0, 1.5, 2.0],
                     label=r"$\delta^{18}O_{c}$ Anomaly (\textperthousand {} vs. PDB)",
                     drawedges=True)
 cbar.set_ticklabels(["-2.0", "-1.5", "-1.0", "-0.5", "$\pm$0.1", "0.5", "1.0", "1.5", "2.0"])
 plt.savefig("Three_Effects.pdf")
-plt.savefig("Figure_2.pdf")
+plt.savefig("Figure2.pdf")
 plt.close()
-
-
